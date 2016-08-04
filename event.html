@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <title>eggshell 小鹿山丘親子旅遊網</title>
+    <meta name="keywords" content="eggshell 小鹿山丘">
+    <meta name="description" content="敲開您的美好生活～這裡是簡單生活的祕密花園，隨時分享簡單、美好、有品味的生活。">
+    <meta name="viewport" content="width=640, user-scalable=no, maximum-scale=1.0">
+    <meta property="og:title" content="eggshell 小鹿山丘" />
+    <meta property="og:image" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="eggshell 小鹿山丘" />
+    <link rel="shortcut icon" href="img/main/short_icon.jpg">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <!-- CSS -->
+    <link href="css/reset.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/main.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/index.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/map.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/event.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/pop.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/pop_done.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <script>
+    ! function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1546831055581837');
+    fbq('track', "PageView");
+    </script>
+</head>
+
+<body id="index-body">
+    <script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '206781816385318',
+            xfbml: true,
+            version: 'v2.6'
+        });
+
+        FB.getLoginStatus(function(response) {
+            if (response.status !== 'connected') {
+
+                $('.go-to-record').css('display', 'none');
+            }
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79220875-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid');
+    ga('send', 'pageview');
+    </script>
+    <div class="popup-done">
+        <div class="popup-done-box">
+            <img class="recommend-done-title" src="img/pop/recommend_bg_title.png" />
+            <img class="recommend-done-content-long" src="img/pop/recommend_done.png" />
+            <img class="checked-done" src="img/pop/submit_btn.png" onclick="ga('send', 'event', '活動頁', 'Click', 'popup checked done');" />
+            <a class="done-link1" href="event.html?move_to=event_rule" onclick="ga('send', 'event', '活動頁', 'Click', 'popup 活動辦法');">活動辦法</a>
+            <a class="done-link2" href="record.html" onclick="ga('send', 'event', '活動頁', 'Click', 'remove done popup 推薦紀錄');">推薦紀錄</a>
+        </div>
+        <div class="remove-popup-done-icon" onclick="ga('send', 'event', '活動頁', 'Click', 'remove done popup');"></div>
+        <div class="popup-done-opacity"></div>
+    </div>
+    <div id="popup2" class="popup">
+        <div class="popup-box">
+            <div id="display-area" class="area-box">
+                <div class="display-recommend-title">
+                    <!-- <p>地點 : </p> -->
+                    <p class="recommend-title-text"></p>
+                </div>
+                <div class="display-recommend-select">
+                    <p>地址 : </p>
+                    <p class="recommend-select-text"></p>
+                </div>
+                <div class="display-recommend-textarea">
+                    <p>好玩的原因 : </p>
+                    <p class="recommend-textarea-text"></p>
+                </div>
+            </div>
+        </div>
+        <div id="remove-popup2" class="remove-popup-icon" onclick="ga('send', 'event', '活動頁', 'Click', 'remove read popup');"></div>
+        <div class="popup-opacity"></div>
+    </div>
+    <div id="popup1" class="popup">
+        <div class="popup-box">
+            <!--test by pop.html-->
+            <img class="recommend-bg-title" src="img/pop/recommend_bg_title.png" />
+            <form action="" method="post" enctype="multipart/form-data">
+                <div style="display: none;">
+                    Select image to upload:
+                    <input type="file" name="fileToUpload_01" id="fileToUpload_01">
+                    <input type="file" name="fileToUpload_02" id="fileToUpload_02">
+                    <input type="file" name="fileToUpload_03" id="fileToUpload_03">
+                    <input type="submit" value="Upload Image" name="submit">
+                </div>
+                <div id="input-area" class="area-box input-area">
+                    <div class="recommend-title">
+                        <p style="color: #FFFF01;">推薦地點 : </p>
+                        <input type="text" name="title" placeholder="內湖運動公園">
+                    </div>
+                    <div class="recommend-select">
+                        <p style="color: #FFFF01;">所在位置 : </p>
+                        <select>
+                            <option value="北部">北部</option>
+                            <option value="中部">中部</option>
+                            <option value="南部">南部</option>
+                            <option value="東部">東部</option>
+                        </select>
+                    </div>
+                    <div class="recommend-textarea">
+                        <p style="color: #FFFF01;">好玩的原因是......</p>
+                        <textarea placeholder="至多一百字內"></textarea>
+                    </div>
+                </div>
+                <div id="display-area" class="area-box display-area" style="display: none;">
+                    <div class="display-recommend-title">
+                        <p>想推薦的地點 : </p>
+                        <p class="recommend-title-text"></p>
+                    </div>
+                    <div class="display-recommend-select">
+                        <p>地點的所在位置 : </p>
+                        <p class="recommend-select-text"></p>
+                    </div>
+                    <div class="display-recommend-textarea edit-status">
+                        <p>您推薦的原因是......</p>
+                        <p class="recommend-textarea-text"></p>
+                    </div>
+                </div>
+            </form>
+            <div id="img_box" class="img_box">
+                <div id="upload_btn" class="upload-img-theme">
+                    <div style="position: relative;width: 100%;height: 100%;">
+                        <img class="theme-middle" src="img/pop/upload_btn.png" />
+                        <p>最多上傳三張</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="remove-popup" class="remove-popup-icon" onclick="ga('send', 'event', '活動頁', 'Click', 'remove input popup');"></div>
+        <img id="preview-btn" class="preview-btn" src="img/pop/preview_btn.png" onclick="ga('send', 'event', '活動頁', 'Click', 'preview input popup');" />
+        <div id="edit-submit-btn-group">
+            <img id="edit-btn" class="edit-btn btn-group-img" src="img/pop/edit_btn.png" onclick="ga('send', 'event', '活動頁', 'Click', 'edit input popup');" />
+            <img id="submit-btn" class="submit-btn btn-group-img" src="img/pop/submit_btn.png" onclick="ga('send', 'event', '活動頁', 'Click', 'submit input popup');" />
+        </div>
+        <div class="popup-opacity"></div>
+    </div>
+    <div class="loading-effect">
+        <img class="loading-effect-pic" src="img/main/load.gif" />
+        <div class="loading-effect-opacity"></div>
+    </div>
+    <div class="loading-effect-fb">
+        <img class="loading-effect-pic" src="img/main/load.gif" />
+        <div class="loading-effect-opacity"></div>
+    </div>
+    <!--所有頁面共用的 Menu-->
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <ul class="nav-ul">
+                <a href="index.html" onclick="ga('send', 'event', 'menu', 'Click', '回首頁');">
+                    <li class="">
+                        <img src="img/menu/index_02.jpg" />
+                    </li>
+                </a>
+                <a href="about.html" onclick="ga('send', 'event', 'menu', 'Click', '關於小鹿山丘');">
+                    <li class="">
+                        <img src="img/menu/index_03.jpg" />
+                    </li>
+                </a>
+                <!-- <li id="expansion">
+                    <img src="img/menu/index_04.jpg" />
+                </li>
+                <a href="event.html" onClick="" class="sub-menu" data-id="1">
+                    <li class="">
+                        <img src="img/menu/index_04_1.jpg" />
+                    </li>
+                </a>
+                <a href="map.html" onClick="" class="sub-menu" data-id="2">
+                    <li class="">
+                        <img src="img/menu/index_04_2.jpg" />
+                    </li>
+                </a>
+                <a href="event.html?move_to=event_equipment" class="sub-menu" data-id="3">
+                    <li class="">
+                        <img src="img/menu/index_04_3.jpg" />
+                    </li>
+                </a> -->
+                <a href="event.html" onclick="ga('send', 'event', 'menu', 'Click', '超可惜景點特輯');">
+                    <li class="">
+                        <img src="img/menu/index_04.jpg" />
+                    </li>
+                </a>
+                <a href="event.html?move_to=event_taiwan" onclick="ga('send', 'event', 'menu', 'Click', '小鹿陪你一起玩');">
+                    <li class="">
+                        <img src="img/menu/index_09.jpg" />
+                    </li>
+                </a>
+                <a href="event.html?move_to=event_equipment" onclick="ga('send', 'event', 'menu', 'Click', '酷夏推薦裝備');">
+                    <li class="">
+                        <img src="img/menu/index_05.jpg" />
+                    </li>
+                </a>
+                <a href="friend.html" onclick="ga('send', 'event', 'menu', 'Click', '親子團行程');">
+                    <li class="">
+                        <img src="img/menu/index_06.jpg" />
+                    </li>
+                </a>
+                <a href="" onClick="ga('send', 'event', 'menu', 'Click', '得獎名單');alert('得獎名單還沒出爐喔\n第一階段名單將於7月25日公布\n敬請期待！');return false;">
+                    <li class="">
+                        <img src="img/menu/index_07.jpg" />
+                    </li>
+                </a>
+                <a href="https://www.facebook.com/eggshellstyle/" target="_blank" onclick="ga('send', 'event', 'menu', 'Click', 'eggshell粉絲團');">
+                    <li class="">
+                        <img src="img/menu/index_08.jpg" />
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="header-content">
+            <!-- 選單 -->
+            <input type="checkbox" id="nav-btn-active">
+            <label for="nav-btn-active">
+                <div id="nav-btn" class="nav-btn btn">
+                    <div id="nav-btn-line" class="nav-btn-line"></div>
+                </div>
+            </label>
+            <div class="back-to-index"></div>
+        </div>
+    </header>
+    <div id="wrap">
+        <div id="content">
+            <div class="currnent-path">
+                <p>首頁 > 超可惜景點特輯</p>
+            </div>
+            <div id="event-index-img">
+                <img src="img/event/event_index.png" />
+                <div class="event-index-btn-group">
+                    <div class="event_index_btn1_text">
+                        <p class="p1">0</p>
+                        <p class="p2">分享</p>
+                        </i>
+                    </div>
+                    <img class="event_index_btn1" onclick="ga('send', 'event', '活動頁', 'Click', '分享景點好禮抽');" src="img/event/event_index_btn1.png" />
+                    <div class="event_index_btn2_text">
+                        <p class="p1">0</p>
+                        <p class="p2">推薦</p>
+                    </div>
+                    <img class="event_index_btn2" onclick="ga('send', 'event', '活動頁', 'Click', '推薦景點抽大獎');" src="img/event/event_index_btn2.png" />
+                </div>
+            </div>
+            <div class="green-line"></div>
+            <div class="event-taiwan">
+                <img src="img/event/event_taiwan.png" style="margin-bottom: 35px;" />
+                <div>
+                    <div style="display: inline-block;">
+                        <img src="img/event/event_taiwan_1.png" class="event-taiwan-0" onclick="ga('send', 'event', '活動頁', 'Click', 'event taiwan 圖1');" />
+                        <div class="share-p">
+                            <i class="fa fa-share" aria-hidden="true"></i>
+                            <p class="share-p-0">0</p>
+                            <p>分享</p>
+                        </div>
+                    </div>
+                    <div style="display: inline-block;">
+                        <img src="img/event/event_taiwan_2.png" class="event-taiwan-1" onclick="ga('send', 'event', '活動頁', 'Click', 'event taiwan 圖2');" />
+                        <div class="share-p">
+                            <i class="fa fa-share" aria-hidden="true"></i>
+                            <p class="share-p-1">0</p>
+                            <p>分享</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: inline-block;">
+                        <img src="img/event/event_taiwan_3.png" class="event-taiwan-2" onclick="ga('send', 'event', '活動頁', 'Click', 'event taiwan 圖3');" />
+                        <div class="share-p">
+                            <i class="fa fa-share" aria-hidden="true"></i>
+                            <p class="share-p-2">0</p>
+                            <p>分享</p>
+                        </div>
+                    </div>
+                    <div style="display: inline-block;">
+                        <img src="img/event/event_taiwan_4.png" class="event-taiwan-3" onclick="ga('send', 'event', '活動頁', 'Click', 'event taiwan 圖4');" />
+                        <div class="share-p">
+                            <i class="fa fa-share" aria-hidden="true"></i>
+                            <p class="share-p-3">0</p>
+                            <p>分享</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-theme-group">
+                <div data-id="0" class="tab-theme" onclick="ga('send', 'event', '活動頁', 'Click', '台北內湖頁籤');">
+                    <img src="img/event/event_03.png" />
+                </div>
+                <div data-id="1" class="tab-theme" onclick="ga('send', 'event', '活動頁', 'Click', '彰化頁籤');">
+                    <img src="img/event/event_05.png" />
+                </div>
+                <div data-id="2" class="tab-theme" onclick="ga('send', 'event', '活動頁', 'Click', '台北金山頁籤');">
+                    <img src="img/event/event_07.png" />
+                </div>
+                <div data-id="3" class="tab-theme" style="margin-right: 1px;" onclick="ga('send', 'event', '活動頁', 'Click', '高雄頁籤');">
+                    <img src="img/event/event_09.png" />
+                </div>
+            </div>
+            <div id="tab-info-window" data-id="0">
+                <div class="info-window-wrap">
+                    <div data-id="clone_me" class="info-window-row">
+                        <div class="info-window-row-content col-left">
+                            <div class="recommend-img"><img src="https://unsplash.it/200/200" /></div>
+                            <img class="fb-share-action" src="img/event/share.png " onclick="ga('send', 'event', '活動頁', 'Click', '我要分享');" />
+                        </div>
+                        <div class="info-window-row-content col-right">
+                            <p class="map-content-title">內湖運動公園</p>
+                            <p class="map-content-slogan">自在跑跳，釋放體力極限</p>
+                            <p class="map-content-addr addr-key">地址 : </p>
+                            <p class="map-content-addr addr-value">台灣台北市內湖區舊宗路二段1號</p>
+                            <!-- <p style="display: block;">好玩的原因 : </p> -->
+                            <p class="map-content-description">大湖公園位於台北市內湖盆地東側，以水鳥景觀著名，面對五指山、忠勇山。公園因電視劇取景曝光率高，可見其山光水色搏得眾愛，原為幽靜的湖泊</p>
+                            <div>
+                                <p>......</p>
+                                <p class="show-more by-event-page" onclick="ga('send', 'event', '活動頁', 'Click', '繼續閱讀_頁籤');"> 繼續閱讀</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="green-line"></div>
+            <img src="img/event/catch@2x.png" />
+            <div class="pretty-pics">
+                <a href="map.html" onclick="ga('send', 'event', '活動頁', 'Click', '超可惜景點地圖 補充入口');"><img src="img/event/pretty_pic_01.png" /></a>
+                <a href="map.html" onclick="ga('send', 'event', '活動頁', 'Click', '超可惜景點地圖 補充入口');"><img src="img/event/pretty_pic_02.png" /></a>
+                <a href="map.html" onclick="ga('send', 'event', '活動頁', 'Click', '超可惜景點地圖 補充入口');"><img src="img/event/pretty_pic_03.png" /></a>
+
+                <img class="pretty-pics-icon icon0" src="img/event/event_map_btn_2.png" />
+                <img class="pretty-pics-icon icon1" src="img/event/event_map_btn_2.png" />
+                <img class="pretty-pics-icon icon2" src="img/event/event_map_btn_2.png" />
+            </div>
+            <div class="activity-group">
+                <div class="activity-group-text">
+                    <p>小鹿也邀請大朋友們小朋友們，趕快來推薦你心目中人少又好玩的景點，就有機會把大獎帶回家，一個點只能推薦一次，先搶先贏喔!</p>
+                </div>
+                <img id="event-event-btn" class="event-event-btn" src="img/event/event_event_btn.png" onclick="ga('send', 'event', '活動頁', 'Click', '我要推薦');" />
+                <!-- <img class="event-map-btn" src="img/event/event_map_btn.png" /> -->
+                <div class="event-map-btn">
+                    <img src="img/event/event_map_btn_1.png" onclick="ga('send', 'event', '活動頁', 'Click', '超可惜景點地圖');">
+                    <img src="img/event/event_map_btn_2.png" onclick="ga('send', 'event', '活動頁', 'Click', '超可惜景點地圖');">
+                </div>
+            </div>
+            <a href="record.html">
+                <p class="go-to-record" onclick="ga('send', 'event', '活動頁', 'Click', '歷程記錄');">歷程記錄</p>
+            </a>
+            <div class="green-line"></div>
+            <div id="event-equipment" class="event-equipment">
+                <img src="img/event/event_equipment.png" />
+            </div>
+            <p class="event-wording">夏季旅遊最怕外在環境威脅，為了安心出遊，做好萬全準備非常重要。小鹿誠心推薦夏日旅遊必帶裝備，讓寶貝在任何環境安全遊玩，家長輕鬆又放心，滿足全家人的貼心需求。</p>
+            <style type="text/css">
+
+            </style>
+            <!-- 0615 james -->
+            <div class="product-intro-group">
+                <!-- <img class="product-intro-more product-intro-more-pos1" src="img/event/more1.png" /> -->
+                <div data-id="0" class="tab-theme" onclick="ga('send', 'event', '活動頁', 'Click', '蚊子不打擾頁籤');">
+                    <img src="img/event/pm1.png" />
+                </div>
+                <div data-id="1" class="tab-theme" onclick="ga('send', 'event', '活動頁', 'Click', '不怕大太陽頁籤');">
+                    <img src="img/event/pm2.png" />
+                </div>
+            </div>
+            <div id="product-info-window">
+                <div class="info-window-wrap">
+                    <div data-id="clone_me" class="info-window-row">
+                        <img src="img/event/p1.png">
+                    </div>
+                </div>
+            </div>
+            <!-- 0615 james end-->
+            <div class="green-line"></div>
+            <div class="event-rule">
+                <img src="img/event/event_rule.png" />
+            </div>
+            <div class="activitie" onclick="ga('send', 'event', '活動頁', 'Click', '參加活動');">
+                <!-- <a href="#event-event-btn"><img src="img/event/activitie.png" /></a> -->
+                <img src="img/event/activitie.png" />
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="img/main/eggshell_footer.png" />
+    </footer>
+    <script src="js/GA.pageview.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/libs/jqueryEasing-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/libs/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="js/libs/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/main.js?c_ver=11"></script>
+    <script type="text/javascript" src="js/map.js?c_ver=11"></script>
+    <script type="text/javascript" src="js/event.js?c_ver=11"></script>
+    <script type="text/javascript" src="js/pop.js?c_ver=11"></script>
+    <script type="text/javascript" src="js/pop_done.js?c_ver=11"></script>
+    <script type="text/javascript" src="js/event_scroll_log.js?c_ver=11"></script>
+</body>
+
+</html>

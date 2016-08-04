@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <title>eggshell 小鹿山丘親子旅遊網</title>
+    <meta name="keywords" content="eggshell 小鹿山丘">
+    <meta name="description" content="敲開您的美好生活～這裡是簡單生活的祕密花園，隨時分享簡單、美好、有品味的生活。">
+    <meta name="viewport" content="width=640, user-scalable=no, maximum-scale=1.0">
+    <meta property="og:title" content="eggshell 小鹿山丘" />
+    <meta property="og:image" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="eggshell 小鹿山丘" />
+    <link rel="shortcut icon" href="img/main/short_icon.jpg">
+    <!-- CSS -->
+    <link href="css/reset.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/main.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/index.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/map.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/pop.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/record.css?c_ver=11" rel="stylesheet" type="text/css" />
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/jstarbox.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <script>
+    ! function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+            n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+    }(window,
+        document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1546831055581837');
+    fbq('track', "PageView");
+    </script>
+</head>
+
+<body id="index-body">
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-FVT3NP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-FVT3NP');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79220875-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid');
+    ga('send', 'pageview');
+    </script>
+    <div class="popup" style="display: none;">
+        <div class="popup-box">
+            <div id="display-area" class="area-box">
+                <div class="display-recommend-title">
+                    <!-- <p>地點 : </p> -->
+                    <p class="recommend-title-text"></p>
+                </div>
+                <div class="display-recommend-select">
+                    <p>地址 : </p>
+                    <p class="recommend-select-text"></p>
+                </div>
+                <div class="display-recommend-textarea">
+                    <p>好玩的原因 : </p>
+                    <p class="recommend-textarea-text"></p>
+                </div>
+            </div>
+        </div>
+        <div id="remove-popup" class="remove-popup-icon"></div>
+        <div class="popup-opacity"></div>
+    </div>
+    <div class="loading-effect">
+        <img class="loading-effect-pic" src="img/main/load.gif" />
+        <div class="loading-effect-opacity"></div>
+    </div>
+    <!--所有頁面共用的 Menu-->
+    <nav class="nav-menu">
+        <div class="nav-content">
+            <ul class="nav-ul">
+                <a href="index.html" onclick="ga('send', 'event', 'menu', 'Click', '回首頁');">
+                    <li class="">
+                        <img src="img/menu/index_02.jpg" />
+                    </li>
+                </a>
+                <a href="about.html" onclick="ga('send', 'event', 'menu', 'Click', '關於小鹿山丘');">
+                    <li class="">
+                        <img src="img/menu/index_03.jpg" />
+                    </li>
+                </a>
+                <!-- <li id="expansion">
+                    <img src="img/menu/index_04.jpg" />
+                </li>
+                <a href="event.html" onClick="" class="sub-menu" data-id="1">
+                    <li class="">
+                        <img src="img/menu/index_04_1.jpg" />
+                    </li>
+                </a>
+                <a href="map.html" onClick="" class="sub-menu" data-id="2">
+                    <li class="">
+                        <img src="img/menu/index_04_2.jpg" />
+                    </li>
+                </a>
+                <a href="event.html?move_to=event_equipment" class="sub-menu" data-id="3">
+                    <li class="">
+                        <img src="img/menu/index_04_3.jpg" />
+                    </li>
+                </a> -->
+                <a href="event.html" onclick="ga('send', 'event', 'menu', 'Click', '超可惜景點特輯');">
+                    <li class="">
+                        <img src="img/menu/index_04.jpg" />
+                    </li>
+                </a>
+                <a href="event.html?move_to=event_taiwan" onclick="ga('send', 'event', 'menu', 'Click', '小鹿陪你一起玩');">
+                    <li class="">
+                        <img src="img/menu/index_09.jpg" />
+                    </li>
+                </a>
+                <a href="event.html?move_to=event_equipment" onclick="ga('send', 'event', 'menu', 'Click', '酷夏推薦裝備');">
+                    <li class="">
+                        <img src="img/menu/index_05.jpg" />
+                    </li>
+                </a>
+                <a href="friend.html" onclick="ga('send', 'event', 'menu', 'Click', '親子團行程');">
+                    <li class="">
+                        <img src="img/menu/index_06.jpg" />
+                    </li>
+                </a>
+                <a href="" onClick="ga('send', 'event', 'menu', 'Click', '得獎名單');alert('得獎名單還沒出爐喔\n第一階段名單將於7月25日公布\n敬請期待！');return false;">
+                    <li class="">
+                        <img src="img/menu/index_07.jpg" />
+                    </li>
+                </a>
+                <a href="https://www.facebook.com/eggshellstyle/" target="_blank" onclick="ga('send', 'event', 'menu', 'Click', 'eggshell粉絲團');">
+                    <li class="">
+                        <img src="img/menu/index_08.jpg" />
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="header-content">
+            <!-- 選單 -->
+            <input type="checkbox" id="nav-btn-active">
+            <label for="nav-btn-active">
+                <div id="nav-btn" class="nav-btn btn">
+                    <div id="nav-btn-line" class="nav-btn-line"></div>
+                </div>
+            </label>
+            <div class="back-to-index"></div>
+        </div>
+    </header>
+    <div id="wrap">
+        <div id="content">
+            <div class="currnent-path">
+                <p>首頁 > 超可惜景點特輯 > 超可惜景點地圖 > 歷程記錄</p>
+            </div>
+            <div class="say-hi-group">
+                <p class="say-hi">親愛的</p>
+                <p class="say-hi say-hi-guy">xxx</p>
+                <p class="say-hi">您好</p>
+            </div>
+            <div class="say-hi-group2">
+                <p class="say-hi">感謝參與製作超可惜景點地圖，目前您已成功推薦</p>
+                <p class="say-hi say-hi-count">xx</p>
+                <p class="say-hi">個地點。</p>
+            </div>
+            <div class="say-hi-group3">
+                <p class="say-hi">於活動截止日前，持續推薦更多地點，就可以獲得更多抽獎機會喔 !</p>
+            </div>
+            <div id="rank-info-window">
+                <div class="info-window-wrap">
+                    <img class="new-catch" src="img/record/new_catch.png" />
+                    <div class="info-window-header"></div>
+                    <div data-id="clone_me" class="info-window-row">
+                        <p class="status-marker">● 未通過 ●</p>
+                        <div class="index-marker">
+                            <img src="img/map/marker_icon.png" />
+                            <p>1</p>
+                        </div>
+                        <div class="info-window-row-content col-left">
+                            <div class="recommend-img"><img src="" /></div>
+                            <div class="show-star-avg-box">
+                                <div class="sm-star-group">
+                                    <i data-id="1" class="sm-star fa fa-star-o" aria-hidden="true"></i>
+                                    <i data-id="2" class="sm-star fa fa-star-o" aria-hidden="true"></i>
+                                    <i data-id="3" class="sm-star fa fa-star-o" aria-hidden="true"></i>
+                                    <i data-id="4" class="sm-star fa fa-star-o" aria-hidden="true"></i>
+                                    <i data-id="5" class="sm-star fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                                <p class="avg-score"></p>
+                                <p>顆星</p>
+                            </div>
+                        </div>
+                        <div class="info-window-row-content col-right">
+                            <p class="map-content-title"></p>
+                            <p class="map-content-addr addr-key">地址 : </p>
+                            <p class="map-content-addr addr-value"></p>
+                            <p style="display: block;">好玩的原因 : </p>
+                            <p class="map-content-description"></p>
+                            <div>
+                                <p>......</p>
+                                <p class="show-more" onclick="ga('send', 'event', '歷程記錄', 'Click', '繼續閱讀_列表');"> 繼續閱讀</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <img id="rank-show-btn" class="rank-show-btn" src="img/map/green_more.png" /> -->
+            <a href="event.html?popup=1" onclick="ga('send', 'event', '歷程記錄', 'Click', '我要推薦');"><img class="new-recommend" src="img/event/event_event_btn.png" /></a>
+        </div>
+    </div>
+    <footer>
+        <img src="img/main/eggshell_footer.png" />
+    </footer>
+    <script src="js/GA.pageview.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-ui-1.10.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/libs/jqueryEasing-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/libs/modernizr-2.6.2.min.js"></script>
+    <script type="text/javascript" src="js/libs/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/main.js?c_ver=11"></script>
+    <script type="text/javascript" src="js/map.js?c_ver=11"></script>
+    <script type="text/javascript" src="js/record.js?c_ver=11"></script>
+    <script type="text/javascript" src="js/pop.js?c_ver=11"></script>
+</body>
+
+</html>

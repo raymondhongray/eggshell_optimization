@@ -1,0 +1,170 @@
+html,
+body {
+    overflow-x: hidden !important;
+}
+
+#content {
+    height: 800px;
+    text-align: center;
+}
+
+.index-main-theme-group {
+    margin-top: 60px;
+}
+
+.index-main-theme {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.index-main-theme > a {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#index-search {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#index-search > p {
+    color: #663300;
+    font-size: 28px;
+}
+
+#index-search > select {
+    width: 130px;
+    height: 40px;
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#index-search > button {
+    width: 95px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 17px;
+    background-color: #acbc1e;
+    color: #fff;
+}
+
+.flex-prev {
+    opacity: 0 !important;
+}
+
+.flex-next {
+    opacity: 0 !important;
+}
+
+.sub-menu {
+    display: none;
+}
+
+
+/*0616 james for transition*/
+
+.flexslider {
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.flexslider.active {
+    opacity: 1;
+}
+
+#index-search {
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+#index-search.active {
+    opacity: 1;
+}
+
+.index-main-theme {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.index-main-theme-group.active .index-main-theme {
+    opacity: 1;
+    transform: none;
+}
+
+.index-main-theme-group div:nth-of-type(1) {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.index-main-theme-group div:nth-of-type(2) {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+}
+
+.index-main-theme-group div:nth-of-type(3) {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.6s;
+}
+
+.index-main-theme-group div:nth-of-type(4) {
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0.9s;
+}
+
+
+/*0616 james for transition end*/
+
+.flexslider-wrap {
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.j-effect {
+    -webkit-animation: jump .8s infinite;
+}
+
+.j-effect:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 128px;
+    left: 40px;
+    width: 44px;
+    height: 10px;
+    background: #eaeaea;
+    border-radius: 100%;
+    -webkit-animation: j-effec_shadow .8s infinite;
+}
+
+@-webkit-keyframes jump {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: -30px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@-webkit-keyframes j-effec_shadow {
+    0%,
+    100% {
+        left: 45px;
+        width: 40px;
+        background: #eaeaea;
+    }
+    50% {
+        top: 158px;
+        left: 40px;
+        /*讓陰影保持在原位*/
+        width: 50px;
+        height: 7px;
+        background: #eee;
+    }
+}
